@@ -1,4 +1,5 @@
-import { Server } from 'ssh2';
+import pkg from 'ssh2';
+const { Server } = pkg;
 import fs from 'fs';
 import { log } from './logger.js';
 
