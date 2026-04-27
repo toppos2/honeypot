@@ -67,7 +67,7 @@ export function startHTTP() {
     setTimeout(() => res.status(401).send(ERROR_PAGE), 800);
   });
 
-  app.all('*', (req, res) => {
+  app.all('/*', (req, res) => {
     log('HTTP', req._ip, 'PROBE', { path: req.path });
     res.status(404).send('Not found');
   });
